@@ -1,0 +1,16 @@
+Hubs-->star Topology
+
+central administrator
+Works at physical layer of the OSI model
+used to setup LAN
+It works on layer 1.
+only broadcasting
+
+PROS
+Cheaper than switches
+Works good for smaller network
+
+CONS
+Issues with broadcast
+No memory
+half-duplex

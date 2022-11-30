@@ -1,0 +1,12 @@
+Difference between HUB and SWITCH
+
+Switch is a networking hardware that connects devices on a computer network to establish a local area network.stores MAC address table.It works on the layer 2.It do unicasting,multicasting and broadcasting.
+
+
+Hub is a networking hardware that connects devices on a computer network to establish a local area network.It works on layer 1.
+ 
+Hub has no memory.But,Switch has memory
+
+
+In diagram 
+it contains 24 ethernet ports and 2 gigabyte(Interface) ports

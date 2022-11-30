@@ -1,0 +1,195 @@
+EXCERCISES
+
+1. Perform a port scan over DNS and POP3 ports
+
+command:
+DNS: nmap –p 53 127.0.0.1
+POP3: nmap –p 110 127.0.0.1
+
+
+2. Perform a port scan over SMTP and IMAP ports  
+
+Command :
+SMTP: nmap –p 25 127.0.0.1
+IMAP: : nmap –p 143 127.0.0.1
+
+
+3. Perform a port scan over HTTP and Telnet port
+
+Command:
+HTTP : nmap –p 80 127.0.0.1
+Telnet port: : nmap –p 23 127.0.0.1
+
+4. Perform a port scan over any network application created by you
+
+Command: 
+nmap –p 8000 127.0.0.1
+
+5. Perform a scan over the target host 172.16.9.83.
+
+Command: 
+nmap –p 172.16.8.133
+
+6. Perform a port scan over TCP ports and UDP ports.
+
+Command: 
+nmap –p T:80 127.0.0.1
+nmap –p U:53 127.0.0.1
+
+
+GENERAL COMMANDS
+1. nmap command to scan a system using hostname
+
+$ nmap hostname
+
+2. nmap command to scan using IP address
+
+$ nmap IP_address
+$ nmap 104.19.154.92
+
+3. Scan multiple hosts using nmap command
+
+$ nmap host1 host2 host3
+$ nmap 134.213.146.5 157.240.3.35 google.com
+
+4. nmap command to scan a range of IP address
+
+$ nmap 104.143.9.110-120
+
+5. Scan a whole subnet using nmap command
+
+$ nmap 104.143.9.*
+
+6. nmap command to get detailed information about the remote machine
+
+$ nmap -v
+$ nmap -v golinuxcloud.com
+
+7. nmap command to exclude some hosts
+
+$ nmap --exclude 
+$ namp 104.143.9.110-130 --exclude 104.143.9.111
+
+8. nmap command to scan hosts from a file
+
+$ nmap -iL filename
+file 
+cat > hosts
+104.143.9.111
+golinuxcloud.com
+134.213.146.5
+
+
+$ namp -iL hosts
+
+9. Scan aggressively using the nmap command
+
+$ sudo nmap -A 
+$ sudo nmap -A localhost
+
+10. nmap command to perform OS detection
+
+$ sudo nmap -O  [OR] $ sudo nmap --osscan-guess
+$ sudo nmap -O 134.213.146.5
+
+
+11. nmap command to scan for version detection
+
+$ nmap -sV
+$ sudo nmap -sV 134.213.146.5
+
+12. nmap command to do a fast scan
+
+$ nmap -F
+$ sudo nmap -F 134.213.146.5
+
+13. nmap command to find live hosts in the network
+
+$ nmap -sP 
+$ sudo nmap -sP 134.213.146.5
+
+14. nmap command to scan and detect firewall
+
+$ sudo nmap -sA 
+$ sudo nmap -sA 134.213.146.5
+
+15. nmap command to check if the host is protected by a firewall
+
+$ sudo nmap -PN
+$ sudo nmap -PN 134.213.146.5
+
+16. nmap command to scan without randomizing
+
+$ nmap -r 
+$ sudo nmap -r 134.213.146.5
+
+17. Scan a specific port using nmap command
+
+$ nmap -p NUM host
+$ sudo nmap -p 139 134.213.146.5
+
+18. nmap command to scan a UDP port
+
+$ sudo nmap -sU NUM
+$ sudo nmap -sU 137 134.213.146.5
+
+19. Scan a specific range of ports using nmap command
+
+$ nmap -p numX-numY 
+$ nmap -p 100-200 134.213.146.5
+
+20. nmap command to show host and port state reasons
+
+$ nmap --reason
+$ nmap --reason 134.213.146.5
+
+
+21. Show only open ports using nmap command
+
+$ npm --open
+$ npm --open 142.250.76.206
+
+22. nmap command to list interfaces and routes
+
+$ nmap --iflist
+$ nmap --iflist 142.250.76.206
+
+23. nmap command to enable IPv6 scanning
+
+$ nmap -6 IPv6_address
+$ nmap -6 2001:db8:3333:4444:5555:6666:7777:8888
+
+24. nmap command to treat all hosts as online
+
+$ nmap -Pn
+$ nmap -Pn 2001:db8:3333:4444:5555:6666:7777:8888
+
+25. Prints all the packets sent and received with nmap command
+
+$ nmap --packet-trace
+$ nmap --packet-trace 142.250.76.206
+
+26. nmap command to enable host timeout
+
+$ nmap --host-timeout
+$ nmap --host-timeout 142.250.76.206
+
+27. List the targets only using nmap command
+
+$ nmap -sL
+$ nmap -sL 142.250.76.5-15
+
+28. Trace hop path to each host with nmap command
+
+$ sudo nmap --traceroute
+$ sudo nmap --traceroute 142.250.76.206
+
+29. nmap command to scan random targets
+
+$ nmap -iR NUM 
+$ nmap -iR 10
+
+30. nmap command to disable port scanning
+
+$ nmap -sn 
+$ nmap -sn 157.240.3.*
